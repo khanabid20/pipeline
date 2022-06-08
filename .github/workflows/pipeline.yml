@@ -6,13 +6,13 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/chekcout@v2
+      - uses: actions/checkout@v2
       - run: python hello.py
   build:
     needs: [test]
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/chekcout@v2
+      - uses: actions/checkout@v2
       - uses: actions/upload-artifact@v2
         with:
           name: hello
